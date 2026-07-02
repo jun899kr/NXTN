@@ -1,52 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NXTN COMPANY</title>
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    background:#000;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    overflow:hidden;
-    font-family:Arial,Helvetica,sans-serif;
-}
-
-h1{
-    color:white;
-    font-size:72px;
-    letter-spacing:16px;
-    font-weight:300;
-    animation:fadeIn 2s ease;
-}
-
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(20px);
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NXTN Company</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-</style>
 
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 24px;
+    }
+
+    .hero {
+      flex-direction: column;
+      background: radial-gradient(circle at center, #111 0%, #000 55%);
+    }
+
+    .logo {
+      font-size: clamp(48px, 9vw, 120px);
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      animation: fadeUp 1.6s ease forwards;
+    }
+
+    .tagline {
+      margin-top: 28px;
+      font-size: clamp(18px, 3vw, 34px);
+      font-weight: 300;
+      color: #cfcfcf;
+      opacity: 0;
+      animation: fadeUp 1.6s ease forwards;
+      animation-delay: 0.7s;
+    }
+
+    .content {
+      background: #f5f5f7;
+      color: #111;
+      flex-direction: column;
+    }
+
+    .content h2 {
+      font-size: clamp(36px, 6vw, 72px);
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .content p {
+      max-width: 760px;
+      font-size: clamp(18px, 2.2vw, 28px);
+      line-height: 1.5;
+      color: #555;
+    }
+
+    .business {
+      background: #fff;
+      color: #111;
+      flex-direction: column;
+    }
+
+    .business h2 {
+      font-size: clamp(36px, 6vw, 72px);
+      margin-bottom: 48px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .card {
+      background: #f5f5f7;
+      border-radius: 28px;
+      padding: 42px 28px;
+      font-size: 22px;
+      font-weight: 500;
+    }
+
+    .contact {
+      background: #000;
+      flex-direction: column;
+    }
+
+    .contact h2 {
+      font-size: clamp(40px, 7vw, 88px);
+      margin-bottom: 28px;
+    }
+
+    .contact a {
+      color: #fff;
+      text-decoration: none;
+      font-size: clamp(18px, 2.5vw, 28px);
+      color: #d0d0d0;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .logo {
+        letter-spacing: 0.12em;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <section class="hero">
+    <div class="logo">NXTN</div>
+    <div class="tagline">Connecting Every Opportunity</div>
+  </section>
 
-<h1>NXTN COMPANY</h1>
+  <section class="content">
+    <h2>NXTN Company</h2>
+    <p>
+      NXTN connects manufacturers, partners, and business opportunities
+      through trust, technology, and market insight.
+    </p>
+  </section>
 
+  <section class="business">
+    <h2>Our Business</h2>
+    <div class="cards">
+      <div class="card">WPC Decking</div>
+      <div class="card">Electronic Components</div>
+      <div class="card">Global Sourcing</div>
+      <div class="card">Marketing Agent</div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Contact</h2>
+    <a href="mailto:junwon@nxtn.co.kr">junwon@nxtn.co.kr</a>
+  </section>
 </body>
 </html>
