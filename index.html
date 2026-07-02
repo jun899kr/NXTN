@@ -6,11 +6,7 @@
   <title>NXTN Company</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -40,14 +36,19 @@
       opacity: 0.55;
     }
 
+    .video-only {
+      padding: 0;
+      background: #000;
+    }
+
+    .video-only .bg-video {
+      opacity: 1;
+    }
+
     .overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.45),
-        rgba(0,0,0,0.7)
-      );
+      background: linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.7));
       z-index: 1;
     }
 
@@ -76,8 +77,13 @@
       color: #111;
     }
 
+    .wpc-info {
+      background: #fff;
+      color: #111;
+    }
+
     .about h2,
-    .wpc h2,
+    .wpc-info h2,
     .contact h2 {
       font-size: clamp(38px, 7vw, 88px);
       font-weight: 600;
@@ -85,18 +91,10 @@
     }
 
     .about p,
-    .wpc p {
+    .wpc-info p {
       font-size: clamp(18px, 2.4vw, 30px);
       line-height: 1.5;
       color: #555;
-    }
-
-    .wpc {
-      color: #fff;
-    }
-
-    .wpc p {
-      color: #d8d8d8;
     }
 
     .contact {
@@ -111,20 +109,12 @@
     }
 
     @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(28px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(28px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 600px) {
-      .hero h1 {
-        letter-spacing: 0.1em;
-      }
+      .hero h1 { letter-spacing: 0.1em; }
     }
   </style>
 </head>
@@ -142,6 +132,12 @@
     </div>
   </section>
 
+  <section class="video-only">
+    <video class="bg-video" autoplay muted loop playsinline>
+      <source src="videos/wpc.mp4" type="video/mp4" />
+    </video>
+  </section>
+
   <section class="about">
     <div class="inner">
       <h2>NXTN Company</h2>
@@ -152,11 +148,7 @@
     </div>
   </section>
 
-  <section class="wpc">
-    <video class="bg-video" autoplay muted loop playsinline>
-      <source src="videos/wpc.mp4" type="video/mp4" />
-    </video>
-    <div class="overlay"></div>
+  <section class="wpc-info">
     <div class="inner">
       <h2>WPC Deck</h2>
       <p>
