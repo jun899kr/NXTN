@@ -2,80 +2,608 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+
   <title>NXTN | 글로벌 소싱 및 비즈니스 개발</title>
-  <meta name="description" content="NXTN은 신뢰할 수 있는 글로벌 제조사와 한국 시장을 연결하는 소싱 및 비즈니스 개발 회사입니다." />
+
+  <meta
+    name="description"
+    content="NXTN은 신뢰할 수 있는 글로벌 제조사와 한국 시장을 연결하며, 제품 소싱부터 품질 대응과 물류 지원까지 제공하는 비즈니스 개발 회사입니다."
+  />
+
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
+
+  <!-- ======================================== -->
+  <!-- ! HEADER START -->
+  <!-- ======================================== -->
   <header class="site-header" id="site-header">
     <div class="header-inner">
-      <a class="header-brand" href="#hero" aria-label="NXTN 홈으로 이동">
-        <img src="images/logo/nxtnlogo.png" alt="NXTN" />
+
+      <a
+        class="header-brand"
+        href="#hero"
+        aria-label="NXTN 홈으로 이동"
+      >
+        <img
+          src="images/logo/nxtnlogo.png"
+          alt="NXTN"
+        />
       </a>
+
       <nav class="desktop-nav" aria-label="주요 메뉴">
         <a href="#about">회사소개</a>
+
+        <!-- ! HEADER - OUR SERVICES 메뉴 추가 -->
+        <a href="#services">서비스</a>
+
         <a href="#products">제품</a>
         <a href="#contact">문의</a>
+
         <div class="language-switch" aria-label="언어 선택">
-          <a class="active" href="index.html" lang="ko">KR</a><span aria-hidden="true">/</span><a href="index-en.html" lang="en">EN</a>
+          <a
+            class="active"
+            href="index.html"
+            lang="ko"
+          >
+            KR
+          </a>
+
+          <span aria-hidden="true">/</span>
+
+          <a
+            href="index-en.html"
+            lang="en"
+          >
+            EN
+          </a>
         </div>
       </nav>
-      <button class="menu-toggle" type="button" aria-label="모바일 메뉴 열기" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="모바일 메뉴 열기"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span></span>
+        <span></span>
+      </button>
     </div>
-    <nav class="mobile-menu" id="mobile-menu" aria-label="모바일 메뉴">
+
+    <nav
+      class="mobile-menu"
+      id="mobile-menu"
+      aria-label="모바일 메뉴"
+    >
       <div class="mobile-menu-inner">
         <a href="#about">회사소개</a>
+
+        <!-- ! MOBILE MENU - OUR SERVICES 메뉴 추가 -->
+        <a href="#services">서비스</a>
+
         <a href="#products">제품</a>
         <a href="#contact">문의</a>
-        <div class="language-switch"><a class="active" href="index.html" lang="ko">KR</a><span aria-hidden="true">/</span><a href="index-en.html" lang="en">EN</a></div>
+
+        <div class="language-switch">
+          <a
+            class="active"
+            href="index.html"
+            lang="ko"
+          >
+            KR
+          </a>
+
+          <span aria-hidden="true">/</span>
+
+          <a
+            href="index-en.html"
+            lang="en"
+          >
+            EN
+          </a>
+        </div>
       </div>
     </nav>
   </header>
+  <!-- ======================================== -->
+  <!-- ! HEADER END -->
+  <!-- ======================================== -->
+
 
   <main>
-    <section class="hero" id="hero" aria-label="NXTN 메인 비주얼">
+
+    <!-- ======================================== -->
+    <!-- ! HERO START -->
+    <!-- ======================================== -->
+    <section
+      class="hero"
+      id="hero"
+      aria-label="NXTN 메인 비주얼"
+    >
       <picture class="hero-picture">
-        <source media="(max-width: 767px)" srcset="images/hero/logo-mobile.png" />
-        <img src="images/hero/logo-web.png" alt="NXTN - Beyond Products, Building Tomorrow" class="hero-image" />
+        <source
+          media="(max-width: 767px)"
+          srcset="images/hero/logo-mobile.png"
+        />
+
+        <img
+          src="images/hero/logo-web.png"
+          alt="NXTN - Beyond Products, Building Tomorrow"
+          class="hero-image"
+        />
       </picture>
-      <a class="scroll-indicator" href="#video" aria-label="다음 섹션으로 이동"><span>SCROLL</span><span class="scroll-line" aria-hidden="true"></span></a>
-    </section>
 
-    <section class="video-section" id="video" aria-label="NXTN 브랜드 영상">
-      <video class="brand-video video-web" autoplay muted loop playsinline preload="metadata"><source src="videos/16n9nxtn.MP4" type="video/mp4" /></video>
-      <video class="brand-video video-mobile" autoplay muted loop playsinline preload="metadata"><source src="videos/1n1nxtn.MP4" type="video/mp4" /></video>
+      <a
+        class="scroll-indicator"
+        href="#video"
+        aria-label="다음 섹션으로 이동"
+      >
+        <span>SCROLL</span>
+        <span
+          class="scroll-line"
+          aria-hidden="true"
+        ></span>
+      </a>
     </section>
+    <!-- ======================================== -->
+    <!-- ! HERO END -->
+    <!-- ======================================== -->
 
-    <section class="about-section section" id="about">
+
+    <!-- ======================================== -->
+    <!-- ! BRAND VIDEO START -->
+    <!-- ======================================== -->
+    <section
+      class="video-section"
+      id="video"
+      aria-label="NXTN 브랜드 영상"
+    >
+      <video
+        class="brand-video video-web"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+      >
+        <source
+          src="videos/16n9nxtn.MP4"
+          type="video/mp4"
+        />
+      </video>
+
+      <video
+        class="brand-video video-mobile"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+      >
+        <source
+          src="videos/1n1nxtn.MP4"
+          type="video/mp4"
+        />
+      </video>
+    </section>
+    <!-- ======================================== -->
+    <!-- ! BRAND VIDEO END -->
+    <!-- ======================================== -->
+
+
+    <!-- ======================================== -->
+    <!-- ! ABOUT US START -->
+    <!-- ======================================== -->
+    <section
+      class="about-section section"
+      id="about"
+    >
       <div class="section-inner">
-        <div class="section-heading reveal"><p class="section-label">ABOUT US</p><h2>Connecting Products,<br />Markets and Partnerships.</h2></div>
+
+        <div class="section-heading reveal">
+          <p class="section-label">ABOUT US</p>
+
+          <h2>
+            Connecting Products,<br />
+            Markets and Partnerships.
+          </h2>
+        </div>
+
         <div class="about-grid">
-          <article class="about-card reveal"><p class="card-number">01</p><h3>ABOUT NXTN</h3><p>NXTN은 신뢰할 수 있는 글로벌 제조사와 한국 시장을 연결하는 소싱 및 비즈니스 개발 회사입니다.</p><p>일회성 거래보다 장기적인 파트너십, 투명한 소통, 실질적인 시장 개발을 중요하게 생각합니다.</p></article>
-          <article class="about-card reveal"><p class="card-number">02</p><h3>OUR GOAL</h3><p>국제 제조사와 한국 기업을 연결하는 신뢰할 수 있는 파트너가 되어, 지속 가능한 협력과 검증된 품질의 제품을 제공하는 것이 목표입니다.</p></article>
-          <article class="about-card reveal"><p class="card-number">03</p><h3>WHAT WE DO</h3><ul class="service-list"><li>글로벌 제품 소싱</li><li>한국 시장 개발</li><li>비즈니스 파트너십</li><li>B2B 영업 지원</li><li>OEM / ODM 협의</li></ul></article>
+
+          <!-- ! ABOUT CARD 01 - ABOUT NXTN -->
+          <article class="about-card reveal">
+            <p class="card-number">01</p>
+
+            <h3>ABOUT NXTN</h3>
+
+            <p>
+              NXTN은 신뢰할 수 있는 글로벌 제조사와 한국 시장을
+              연결하는 소싱 및 비즈니스 개발 회사입니다.
+            </p>
+
+            <p>
+              일회성 거래보다 장기적인 파트너십, 투명한 소통,
+              실질적인 시장 개발을 중요하게 생각합니다.
+            </p>
+          </article>
+
+
+          <!-- ! ABOUT CARD 02 - OUR GOAL -->
+          <article class="about-card reveal">
+            <p class="card-number">02</p>
+
+            <h3>OUR GOAL</h3>
+
+            <p>
+              국제 제조사와 한국 기업을 연결하는 신뢰할 수 있는
+              파트너가 되어, 지속 가능한 협력과 검증된 품질의
+              제품을 제공하는 것이 목표입니다.
+            </p>
+          </article>
+
         </div>
       </div>
     </section>
+    <!-- ======================================== -->
+    <!-- ! ABOUT US END -->
+    <!-- ======================================== -->
 
-    <section class="products-section section" id="products">
-      <div class="section-inner"><div class="section-heading reveal"><p class="section-label">OUR PRODUCTS</p><h2>Selected for Commercial<br />and Industrial Applications.</h2><p class="section-description">신뢰할 수 있는 제조 파트너십을 바탕으로 엄선한 제품을 제공합니다.</p></div></div>
-      <div class="product-list">
-        <a class="product-banner reveal" href="products/wpc-deck.html"><img src="images/products/product-wpc.png" alt="WPC 데크" class="product-image" /><div class="product-overlay"></div><div class="product-content"><p class="product-number">01</p><h3>WPC DECK</h3><p>내구성, 낮은 유지관리 부담, 현대적인 디자인을 갖춘 프리미엄 외부 데크 솔루션입니다.</p><span class="product-link">제품 보기 <span aria-hidden="true">↗</span></span></div></a>
-        <a class="product-banner reveal" href="products/artificial-thatch.html"><img src="images/products/product-thatch.png" alt="인조 야자지붕" class="product-image" /><div class="product-overlay"></div><div class="product-content"><p class="product-number">02</p><h3>ARTIFICIAL THATCH</h3><p>카페, 리조트, 숙박시설, 상업공간에 적용할 수 있는 자연스러운 질감의 인조 야자지붕입니다.</p><span class="product-link">제품 보기 <span aria-hidden="true">↗</span></span></div></a>
-        <a class="product-banner reveal" href="products/electric-components.html"><img src="images/products/product-electric.png" alt="산업용 전기 및 통신 부품" class="product-image" /><div class="product-overlay"></div><div class="product-content"><p class="product-number">03</p><h3>ELECTRIC COMPONENTS</h3><p>통신 및 제조 현장에 적용할 수 있는 신뢰성 높은 산업용 커넥터와 전자부품을 제공합니다.</p><span class="product-link">제품 보기 <span aria-hidden="true">↗</span></span></div></a>
+
+    <!-- ======================================== -->
+    <!-- ! OUR SERVICES START -->
+    <!-- ! 제품 소싱 / 물류 지원 / 품질 대응 -->
+    <!-- ======================================== -->
+    <section
+      class="services-section section"
+      id="services"
+    >
+      <div class="section-inner">
+
+        <!-- ! OUR SERVICES - SECTION HEADING -->
+        <div class="section-heading reveal">
+          <p class="section-label">OUR SERVICES</p>
+
+          <h2>
+            From Sourcing<br />
+            to Delivery.
+          </h2>
+
+          <p class="section-description">
+            제품 소싱부터 품질 대응과 물류 지원까지,
+            해외 자재 구매에 필요한 과정을 하나의 창구에서 연결합니다.
+          </p>
+        </div>
+
+
+        <!-- ! OUR SERVICES - SERVICE CARDS -->
+        <div class="service-grid">
+
+          <!-- ! OUR SERVICES 01 - GLOBAL SOURCING -->
+          <article class="service-card reveal">
+            <p class="card-number">01</p>
+
+            <h3>GLOBAL SOURCING</h3>
+
+            <p>
+              고객의 요구사항과 사용 목적에 적합한 해외 제조사와
+              제품을 검토하고, 견적·사양·납기 협의를 지원합니다.
+            </p>
+          </article>
+
+
+          <!-- ! OUR SERVICES 02 - LOGISTICS SUPPORT -->
+          <!-- ! NXTN 구매 고객 대상 무료 포워딩 기본 컨설팅 -->
+          <article class="service-card reveal">
+            <p class="card-number">02</p>
+
+            <h3>LOGISTICS SUPPORT</h3>
+
+            <p>
+              NXTN을 통해 자재를 구매하는 고객에게 국제운송,
+              예상 물류비 및 수입 절차에 대한 기본 포워딩
+              컨설팅을 무료로 제공합니다.
+            </p>
+
+            <p>
+              필요 시 전문 물류 파트너를 통해 해상·항공 운송,
+              통관, 수입대행 및 국내 배송을 연결합니다.
+            </p>
+          </article>
+
+
+          <!-- ! OUR SERVICES 03 - QUALITY COORDINATION -->
+          <!-- ! 직접 품질보증이 아닌 제조사와 고객 간 품질 대응 및 조율 -->
+          <article class="service-card reveal">
+            <p class="card-number">03</p>
+
+            <h3>QUALITY COORDINATION</h3>
+
+            <p>
+              제품 사양 확인부터 생산과 납품 이후 발생할 수 있는
+              품질 관련 사항까지, 제조사와 고객 사이의 원활한
+              소통과 대응을 지원합니다.
+            </p>
+          </article>
+
+        </div>
+
+
+        <!-- ======================================== -->
+        <!-- ! WHAT WE DO START -->
+        <!-- ! 기존 ABOUT 카드에서 OUR SERVICES 하단으로 이동 -->
+        <!-- ======================================== -->
+        <div class="what-we-do reveal">
+
+          <div class="what-we-do-heading">
+            <p class="card-number">04</p>
+
+            <h3>WHAT WE DO</h3>
+
+            <!-- ! WHAT WE DO - 포워딩 및 전체 구매 과정 문구 추가 -->
+            <p class="what-we-do-description">
+              제품 소싱부터 품질 대응, 포워딩 및 수입 지원까지
+              해외 자재 구매의 모든 과정을 연결합니다.
+            </p>
+          </div>
+
+          <ul class="service-list">
+            <li>글로벌 제품 소싱</li>
+            <li>한국 시장 개발</li>
+            <li>비즈니스 파트너십</li>
+            <li>B2B 영업 지원</li>
+            <li>OEM / ODM 협의</li>
+
+            <!-- ! WHAT WE DO - 물류 지원 항목 추가 -->
+            <li>포워딩 및 수입 절차 지원</li>
+
+            <!-- ! WHAT WE DO - 품질 대응 항목 추가 -->
+            <li>제조사 품질 대응 및 커뮤니케이션</li>
+          </ul>
+
+        </div>
+        <!-- ======================================== -->
+        <!-- ! WHAT WE DO END -->
+        <!-- ======================================== -->
+
       </div>
     </section>
+    <!-- ======================================== -->
+    <!-- ! OUR SERVICES END -->
+    <!-- ======================================== -->
 
-    <section class="contact-section section" id="contact"><div class="section-inner contact-inner"><div class="contact-copy reveal"><p class="section-label">CONTACT</p><h2>Let’s Build the Next<br />Opportunity Together.</h2><p>제품 및 파트너십 관련 문의가 있으시면 언제든지 연락해 주세요.</p></div><a class="contact-email reveal" href="mailto:sales@nxtn.co.kr"><span>sales@nxtn.co.kr</span><span aria-hidden="true">↗</span></a></div></section>
+
+    <!-- ======================================== -->
+    <!-- ! OUR PRODUCTS START -->
+    <!-- ======================================== -->
+    <section
+      class="products-section section"
+      id="products"
+    >
+      <div class="section-inner">
+
+        <div class="section-heading reveal">
+          <p class="section-label">OUR PRODUCTS</p>
+
+          <h2>
+            Selected for Commercial<br />
+            and Industrial Applications.
+          </h2>
+
+          <p class="section-description">
+            신뢰할 수 있는 제조 파트너십을 바탕으로
+            엄선한 제품을 제공합니다.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="product-list">
+
+        <!-- ! PRODUCT 01 - WPC DECK -->
+        <a
+          class="product-banner reveal"
+          href="products/wpc-deck.html"
+        >
+          <img
+            src="images/products/product-wpc.png"
+            alt="WPC 데크"
+            class="product-image"
+          />
+
+          <div class="product-overlay"></div>
+
+          <div class="product-content">
+            <p class="product-number">01</p>
+
+            <h3>WPC DECK</h3>
+
+            <p>
+              내구성, 낮은 유지관리 부담, 현대적인 디자인을
+              갖춘 프리미엄 외부 데크 솔루션입니다.
+            </p>
+
+            <span class="product-link">
+              제품 보기
+              <span aria-hidden="true">↗</span>
+            </span>
+          </div>
+        </a>
+
+
+        <!-- ! PRODUCT 02 - ARTIFICIAL THATCH -->
+        <a
+          class="product-banner reveal"
+          href="products/artificial-thatch.html"
+        >
+          <img
+            src="images/products/product-thatch.png"
+            alt="인조 야자지붕"
+            class="product-image"
+          />
+
+          <div class="product-overlay"></div>
+
+          <div class="product-content">
+            <p class="product-number">02</p>
+
+            <h3>ARTIFICIAL THATCH</h3>
+
+            <p>
+              카페, 리조트, 숙박시설, 상업공간에 적용할 수 있는
+              자연스러운 질감의 인조 야자지붕입니다.
+            </p>
+
+            <span class="product-link">
+              제품 보기
+              <span aria-hidden="true">↗</span>
+            </span>
+          </div>
+        </a>
+
+
+        <!-- ! PRODUCT 03 - ELECTRIC COMPONENTS -->
+        <a
+          class="product-banner reveal"
+          href="products/electric-components.html"
+        >
+          <img
+            src="images/products/product-electric.png"
+            alt="산업용 전기 및 통신 부품"
+            class="product-image"
+          />
+
+          <div class="product-overlay"></div>
+
+          <div class="product-content">
+            <p class="product-number">03</p>
+
+            <h3>ELECTRIC COMPONENTS</h3>
+
+            <p>
+              통신 및 제조 현장에 적용할 수 있는 신뢰성 높은
+              산업용 커넥터와 전자부품을 제공합니다.
+            </p>
+
+            <span class="product-link">
+              제품 보기
+              <span aria-hidden="true">↗</span>
+            </span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+    <!-- ======================================== -->
+    <!-- ! OUR PRODUCTS END -->
+    <!-- ======================================== -->
+
+
+    <!-- ======================================== -->
+    <!-- ! CONTACT START -->
+    <!-- ======================================== -->
+    <section
+      class="contact-section section"
+      id="contact"
+    >
+      <div class="section-inner contact-inner">
+
+        <div class="contact-copy reveal">
+          <p class="section-label">CONTACT</p>
+
+          <h2>
+            Let’s Build the Next<br />
+            Opportunity Together.
+          </h2>
+
+          <p>
+            제품, 소싱, 물류 및 파트너십 관련 문의가 있으시면
+            언제든지 연락해 주세요.
+          </p>
+        </div>
+
+        <a
+          class="contact-email reveal"
+          href="mailto:sales@nxtn.co.kr"
+        >
+          <span>sales@nxtn.co.kr</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+
+      </div>
+    </section>
+    <!-- ======================================== -->
+    <!-- ! CONTACT END -->
+    <!-- ======================================== -->
+
   </main>
 
+
+  <!-- ======================================== -->
+  <!-- ! FOOTER START -->
+  <!-- ======================================== -->
   <footer class="site-footer">
-    <div class="footer-inner"><div class="footer-brand">
-<img class="footer-logo-image" src="images/logo/nxtnlogo-w.png" alt="NXTN" />
-      <p class="footer-slogan">Beyond Products, Building Tomorrow.</p><p class="footer-services">Global Sourcing • Market Development • Business Partnership</p></div><div class="footer-info"><p>사업자등록번호 772-32-01726</p><p>대한민국</p><a href="mailto:sales@nxtn.co.kr">sales@nxtn.co.kr</a></div></div>
-    <div class="footer-bottom"><p>© 2026 NXTN. All Rights Reserved.</p></div>
+
+    <div class="footer-inner">
+
+      <!-- ======================================== -->
+      <!-- ! FOOTER BRAND & BUSINESS INFO -->
+      <!-- ! 기존 오른쪽 footer-info를 왼쪽 footer-brand 내부로 이동 -->
+      <!-- ======================================== -->
+      <div class="footer-brand">
+
+        <img
+          class="footer-logo-image"
+          src="images/logo/nxtnlogo-w.png"
+          alt="NXTN"
+        />
+
+        <p class="footer-slogan">
+          Beyond Products, Building Tomorrow.
+        </p>
+
+        <p class="footer-services">
+          Global Sourcing • Market Development • Business Partnership
+        </p>
+
+
+        <!-- ! FOOTER BUSINESS INFORMATION START -->
+        <!-- ! CSS 수정 시 로고 아래 세로 정렬 및 간격 적용 필요 -->
+        <div class="footer-info">
+          <p>사업자등록번호 772-32-01726</p>
+          <p>대한민국</p>
+
+          <a href="mailto:sales@nxtn.co.kr">
+            sales@nxtn.co.kr
+          </a>
+        </div>
+        <!-- ! FOOTER BUSINESS INFORMATION END -->
+
+      </div>
+
+    </div>
+
+
+    <!-- ! FOOTER COPYRIGHT -->
+    <div class="footer-bottom">
+      <p>© 2026 NXTN. All Rights Reserved.</p>
+    </div>
+
   </footer>
+  <!-- ======================================== -->
+  <!-- ! FOOTER END -->
+  <!-- ======================================== -->
+
+
   <script src="js/script.js"></script>
+
 </body>
 </html>
