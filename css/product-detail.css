@@ -31,9 +31,6 @@
   transition: background .3s ease;
 }
 
-.product-header.is-scrolled {
-  background: rgba(20,20,20,.92);
-}
 
 .product-brand img,
 .footer-logo img {
@@ -84,7 +81,7 @@
   place-items: center;
   visibility: hidden;
   opacity: 0;
-  background: #111;
+  background: #F4F0E8;
   transition: opacity .3s ease, visibility .3s ease;
 }
 
@@ -101,7 +98,7 @@
 }
 
 .product-mobile-menu a {
-  color: #fff;
+  color: #222;
   text-decoration: none;
   font-size: clamp(24px, 7vw, 42px);
   font-weight: 500;
@@ -256,7 +253,18 @@
   height: min(78vw, 900px);
   object-fit: cover;
 }
+.product-header.is-scrolled {
+  background: rgba(244,240,232,.95);
+  border-bottom: 1px solid #DDD5C8;
+}
 
+.product-header.is-scrolled .product-nav a {
+  color: #222;
+}
+
+.product-header.is-scrolled .product-menu-button span {
+  background: #222;
+}
 .application-list {
   max-width: 1400px;
   margin: 0 auto;
@@ -285,7 +293,7 @@
   grid-template-columns: 1.4fr .6fr;
   gap: 14px;
   padding: 14px;
-  background: #111;
+  background: #F4F0E8;
 }
 
 .product-gallery figure {
@@ -372,8 +380,9 @@
 
 .product-footer {
   padding: 64px 6vw;
-  background: #111;
-  color: rgba(255,255,255,.55);
+  background: #F4F0E8;
+  color: #666;
+  border-top: 1px solid #DDD5C8;
   text-align: center;
   font-size: 12px;
 }
