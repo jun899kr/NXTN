@@ -3,35 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>NXTN Company</title>
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      overflow-x: hidden;
+    }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: #F7F2EA;
       color: #333;
-      overflow-x: hidden;
     }
 
+    /* 언어 선택 버튼 */
     .lang-switch {
       position: fixed;
       top: 24px;
       right: 24px;
-      z-index: 10;
+      z-index: 100;
       display: flex;
       gap: 8px;
       padding: 6px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.35);
+      background: rgba(255, 255, 255, 0.35);
       backdrop-filter: blur(14px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
     }
 
     .lang-switch button {
-      border: 1px solid rgba(80,80,80,0.18);
-      background: rgba(255,255,255,0.35);
+      border: 1px solid rgba(80, 80, 80, 0.18);
+      background: rgba(255, 255, 255, 0.35);
       color: #555;
       padding: 8px 14px;
       border-radius: 20px;
@@ -45,9 +57,12 @@
       border-color: #B89155;
     }
 
+    /* 공통 섹션 */
     section {
       position: relative;
+      width: 100%;
       min-height: 100vh;
+      min-height: 100svh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -56,9 +71,10 @@
       overflow: hidden;
     }
 
+    /* 첫 번째 로고 섹션 */
     .logo-hero {
       padding: 0;
-      background: #F7F2EA;
+      background-color: #F7F2EA;
       background-image: url("logo.png");
       background-size: cover;
       background-position: center center;
@@ -66,6 +82,7 @@
       animation: logoFadeIn 1.8s ease forwards;
     }
 
+    /* 영상 섹션 */
     .video-only {
       padding: 0;
       background: #F3EEE6;
@@ -73,39 +90,58 @@
 
     .bg-video {
       position: absolute;
-      inset: 0;
+      top: 0;
+      left: 0;
+      z-index: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: center center;
-      z-index: 0;
-      opacity: 1;
       display: block;
     }
 
+    /* PC 영상 기본 노출 */
+    .desktop-video {
+      display: block;
+    }
 
+    /* 모바일 영상 기본 숨김 */
+    .mobile-video {
+      display: none;
+    }
+
+    /* 텍스트 영역 */
     .inner {
       position: relative;
       z-index: 2;
+      width: 100%;
       max-width: 980px;
     }
 
-    .fade-section .inner {
+    .fade-section .inner,
+    .fade-section > h2,
+    .fade-section > a {
       opacity: 0;
       transform: translateY(34px);
-      transition: opacity 1.1s ease, transform 1.1s ease;
+      transition:
+        opacity 1.1s ease,
+        transform 1.1s ease;
     }
 
-    .fade-section.show .inner {
+    .fade-section.show .inner,
+    .fade-section.show > h2,
+    .fade-section.show > a {
       opacity: 1;
       transform: translateY(0);
     }
 
+    /* 회사 소개 */
     .about {
       background: #EFE7DD;
       color: #333;
     }
 
+    /* WPC 소개 */
     .wpc-info {
       background: #F8F6F2;
       color: #333;
@@ -114,19 +150,21 @@
     .about h2,
     .wpc-info h2,
     .contact h2 {
-      font-size: clamp(38px, 7vw, 88px);
-      font-weight: 600;
       margin-bottom: 28px;
       color: #3D3D3D;
+      font-size: clamp(38px, 7vw, 88px);
+      font-weight: 600;
     }
 
     .about p,
     .wpc-info p {
+      color: #6B6B6B;
       font-size: clamp(18px, 2.4vw, 30px);
       line-height: 1.5;
-      color: #6B6B6B;
+      word-break: keep-all;
     }
 
+    /* 연락처 */
     .contact {
       background: #E7DDD1;
       color: #333;
@@ -140,10 +178,18 @@
     }
 
     @keyframes logoFadeIn {
-      from { opacity: 0; transform: scale(1.03); }
-      to { opacity: 1; transform: scale(1); }
+      from {
+        opacity: 0;
+        transform: scale(1.03);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
 
+    /* 모바일 */
     @media (max-width: 768px) {
       .lang-switch {
         top: 16px;
@@ -156,9 +202,23 @@
         background-position: center center;
       }
 
+      /* PC 영상 숨김 */
+      .desktop-video {
+        display: none;
+      }
+
+      /* 모바일 정방형 영상 노출 */
+      .mobile-video {
+        display: block;
+      }
+
       .bg-video {
         object-fit: cover;
         object-position: center center;
+      }
+
+      section {
+        padding: 40px 20px;
       }
     }
   </style>
@@ -167,80 +227,184 @@
 <body>
 
   <div class="lang-switch">
-    <button class="active" onclick="setLanguage('ko')">KOR</button>
-    <button onclick="setLanguage('en')">ENG</button>
+    <button
+      type="button"
+      class="active"
+      onclick="setLanguage('ko')"
+    >
+      KOR
+    </button>
+
+    <button
+      type="button"
+      onclick="setLanguage('en')"
+    >
+      ENG
+    </button>
   </div>
 
+  <!-- 첫 번째 로고 화면 -->
   <section class="hero logo-hero"></section>
 
+  <!-- 두 번째 영상 화면 -->
   <section class="video-only">
-    <video class="bg-video" autoplay muted loop playsinline>
-      <source src="videos/1n1 nxtn.mp4" type="video/mp4" media="(max-width: 768px)" />
-      <source src="videos/16n9 nxtn.mp4" type="video/mp4" />
+
+    <!-- PC용 16:9 영상 -->
+    <video
+      class="bg-video desktop-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+    >
+      <source
+        src="videos/16n9-nxtn.mp4"
+        type="video/mp4"
+      />
     </video>
+
+    <!-- 모바일용 1:1 정방형 영상 -->
+    <video
+      class="bg-video mobile-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+    >
+      <source
+        src="videos/1n1-nxtn.mp4"
+        type="video/mp4"
+      />
+    </video>
+
   </section>
 
+  <!-- 회사 소개 -->
   <section class="about fade-section">
     <div class="inner">
-      <h2 data-ko="NXTN Company" data-en="NXTN Company">NXTN Company</h2>
+      <h2
+        data-ko="NXTN Company"
+        data-en="NXTN Company"
+      >
+        NXTN Company
+      </h2>
+
       <p
         data-ko="NXTN은 신뢰, 기술, 시장에 대한 이해를 바탕으로 제조사와 파트너, 그리고 새로운 비즈니스 기회를 연결합니다."
         data-en="NXTN connects manufacturers, partners, and business opportunities through trust, technology, and market insight."
       >
-        NXTN은 신뢰, 기술, 시장에 대한 이해를 바탕으로 제조사와 파트너, 그리고 새로운 비즈니스 기회를 연결합니다.
+        NXTN은 신뢰, 기술, 시장에 대한 이해를 바탕으로 제조사와 파트너,
+        그리고 새로운 비즈니스 기회를 연결합니다.
       </p>
     </div>
   </section>
 
+  <!-- WPC 소개 -->
   <section class="wpc-info fade-section">
     <div class="inner">
-      <h2 data-ko="WPC Deck" data-en="WPC Deck">WPC Deck</h2>
+      <h2
+        data-ko="WPC Deck"
+        data-en="WPC Deck"
+      >
+        WPC Deck
+      </h2>
+
       <p
         data-ko="내구성과 디자인을 갖춘 현대적인 WPC 데크 솔루션을 야외 공간, 상업 시설, 건축 프로젝트에 제안합니다."
         data-en="We introduce durable and modern WPC decking solutions for outdoor spaces, commercial projects, and architectural applications."
       >
-        내구성과 디자인을 갖춘 현대적인 WPC 데크 솔루션을 야외 공간, 상업 시설, 건축 프로젝트에 제안합니다.
+        내구성과 디자인을 갖춘 현대적인 WPC 데크 솔루션을 야외 공간,
+        상업 시설, 건축 프로젝트에 제안합니다.
       </p>
     </div>
   </section>
 
+  <!-- 연락처 -->
   <section class="contact fade-section">
-    <h2 data-ko="Contact" data-en="Contact">Contact</h2>
-    <a href="mailto:sales@nxtn.co.kr">sales@nxtn.co.kr</a>
+    <h2
+      data-ko="Contact"
+      data-en="Contact"
+    >
+      Contact
+    </h2>
+
+    <a href="mailto:sales@nxtn.co.kr">
+      sales@nxtn.co.kr
+    </a>
   </section>
 
   <script>
     function setLanguage(lang) {
       document.documentElement.lang = lang;
 
-      document.querySelectorAll("[data-ko][data-en]").forEach(function(el) {
-        el.textContent = el.dataset[lang];
-      });
+      document
+        .querySelectorAll("[data-ko][data-en]")
+        .forEach(function (element) {
+          element.textContent = element.dataset[lang];
+        });
 
-      document.querySelectorAll(".lang-switch button").forEach(function(btn) {
-        btn.classList.remove("active");
-      });
+      document
+        .querySelectorAll(".lang-switch button")
+        .forEach(function (button) {
+          button.classList.remove("active");
+        });
 
       if (lang === "ko") {
-        document.querySelector(".lang-switch button:nth-child(1)").classList.add("active");
+        document
+          .querySelector(".lang-switch button:nth-child(1)")
+          .classList.add("active");
       } else {
-        document.querySelector(".lang-switch button:nth-child(2)").classList.add("active");
+        document
+          .querySelector(".lang-switch button:nth-child(2)")
+          .classList.add("active");
       }
     }
 
     setLanguage("ko");
 
-    const observer = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
+    const observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      },
+      {
+        threshold: 0.25
+      }
+    );
+
+    document
+      .querySelectorAll(".fade-section")
+      .forEach(function (section) {
+        observer.observe(section);
+      });
+
+    /*
+      모바일에서 CSS 전환 후 영상이 정지되는 경우를 방지합니다.
+    */
+    function playVisibleVideo() {
+      const videos = document.querySelectorAll(".bg-video");
+
+      videos.forEach(function (video) {
+        const isVisible = window.getComputedStyle(video).display !== "none";
+
+        if (isVisible) {
+          video.play().catch(function () {
+            // 자동재생이 차단되더라도 페이지 오류는 발생시키지 않습니다.
+          });
+        } else {
+          video.pause();
         }
       });
-    }, { threshold: 0.25 });
+    }
 
-    document.querySelectorAll(".fade-section").forEach(function(section) {
-      observer.observe(section);
-    });
+    window.addEventListener("load", playVisibleVideo);
+    window.addEventListener("resize", playVisibleVideo);
+    window.addEventListener("orientationchange", playVisibleVideo);
   </script>
 
 </body>
