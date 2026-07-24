@@ -159,7 +159,7 @@ ul {
   align-items: center;
   gap: 34px;
 
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 600;
   letter-spacing: 0.12em;
 }
@@ -402,7 +402,7 @@ ul {
 
   color: var(--gold);
 
-  font-size: 11px;
+  font-size: 18px;
   line-height: 1.4;
   font-weight: 700;
   letter-spacing: 0.2em;
@@ -460,7 +460,7 @@ ul {
 
   color: var(--gold);
 
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.15em;
 }
@@ -522,7 +522,7 @@ ul {
 .service-card h3 {
   margin-bottom: 30px;
 
-  font-size: 18px;
+  font-size: 22px;
   line-height: 1.4;
   font-weight: 650;
   letter-spacing: 0.07em;
@@ -1297,7 +1297,7 @@ ul {
 
   .service-card h3 {
     margin-bottom: 23px;
-    font-size: 16px;
+    font-size: 22px;
   }
 
   .service-card > p:not(.card-number) {
