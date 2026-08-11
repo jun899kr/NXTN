@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Korean Main -->
+  <url>
+    <loc>https://nxtn.co.kr/</loc>
+  </url>
+
+  <!-- English Main -->
+  <url>
+    <loc>https://nxtn.co.kr/index-en.html</loc>
+  </url>
+
+  <!-- WPC Deck -->
+  <url>
+    <loc>https://nxtn.co.kr/products/wpc-deck.html</loc>
+  </url>
+
+  <url>
+    <loc>https://nxtn.co.kr/products/wpc-deck-en.html</loc>
+  </url>
+
+  <!-- Artificial Thatch -->
+  <url>
+    <loc>https://nxtn.co.kr/products/artificial-thatch.html</loc>
+  </url>
+
+  <url>
+    <loc>https://nxtn.co.kr/products/artificial-thatch-en.html</loc>
+  </url>
+
+  <!-- Electric Components -->
+  <url>
+    <loc>https://nxtn.co.kr/products/electric-components.html</loc>
+  </url>
+
+  <url>
+    <loc>https://nxtn.co.kr/products/electric-components-en.html</loc>
+  </url>
+
+</urlset>
