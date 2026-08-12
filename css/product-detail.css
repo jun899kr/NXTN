@@ -111,7 +111,7 @@
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  gap: 28px;
+  gap: 20px;
   padding: 0 48px;
   box-sizing: border-box;
   text-align: left;
@@ -120,8 +120,20 @@
 .product-mobile-menu a {
   color: #222;
   text-decoration: none;
-  font-size: clamp(24px, 7vw, 42px);
+  font-size: 22px;
   font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  transition: opacity .2s ease;
+}
+
+.product-mobile-menu a:hover {
+  opacity: .55;
+}
+.product-mobile-menu .language-switch {
+  margin-top: 10px;
+  font-size: 14px;
+  letter-spacing: .08em;
 }
 .product-hero {
   position: relative;
@@ -481,7 +493,13 @@
     min-height: 72px;
     padding: max(16px, env(safe-area-inset-top)) 20px 16px;
   }
+.product-mobile-menu a {
+  font-size: clamp(24px, 7vw, 42px);
+}
 
+.product-mobile-menu nav {
+  gap: 28px;
+}
   .product-brand img {
     width: 112px;
   }
