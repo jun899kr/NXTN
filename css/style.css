@@ -583,7 +583,8 @@ ul {
 ======================================== */
 
 .service-list {
-  color: #5f5b55;
+margin-top: 28px;
+   color: #5f5b55;
   font-size: 18px;
 }
 
@@ -1331,7 +1332,8 @@ ul {
 }
 
   .service-list {
-    font-size: 14px;
+    margin-top: 28px;
+     font-size: 14px;
   }
 
 
