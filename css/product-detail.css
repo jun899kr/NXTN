@@ -73,7 +73,17 @@
   background: #fff;
   transition: transform .3s ease;
 }
+.product-menu-button.is-open span {
+  background: #222;
+}
 
+.product-menu-button.is-open span:first-child {
+  transform: translateY(3.5px) rotate(45deg);
+}
+
+.product-menu-button.is-open span:last-child {
+  transform: translateY(-3.5px) rotate(-45deg);
+}
 .product-mobile-menu {
   position: fixed;
   inset: 0;
@@ -475,17 +485,7 @@
     display: none;
   }
 
-  .product-menu-button {
-    display: block;
-  }
 
-  .product-menu-button.is-open span:first-child {
-    transform: translateY(3.5px) rotate(45deg);
-  }
-
-  .product-menu-button.is-open span:last-child {
-    transform: translateY(-3.5px) rotate(-45deg);
-  }
 
 .product-hero-content {
   padding: 44px 24px 72px;
