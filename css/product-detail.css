@@ -56,12 +56,13 @@
 }
 
 .product-menu-button {
-  display: none;
+  display: block;
   width: 42px;
   height: 42px;
   padding: 0;
   border: 0;
   background: transparent;
+  cursor: pointer;
 }
 
 .product-menu-button span {
